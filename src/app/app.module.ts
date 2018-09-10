@@ -8,9 +8,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatInputModule, MatCardModule, MatExpansionModule } from '@angular/material';
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { NewPdaFormComponent } from './components/new-pda-form/new-pda-form.component';
+import {MapContainerComponent} from './components/map-container/map-container.component';
+import { ListPdasComponent } from './components/list-pdas/list-pdas.component';
 
 
 
@@ -22,6 +24,8 @@ import { NewPdaFormComponent } from './components/new-pda-form/new-pda-form.comp
     HomeComponent,
     NavbarComponent,
     NewPdaFormComponent,
+    MapContainerComponent,
+    ListPdasComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { NewPdaFormComponent } from './components/new-pda-form/new-pda-form.comp
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
