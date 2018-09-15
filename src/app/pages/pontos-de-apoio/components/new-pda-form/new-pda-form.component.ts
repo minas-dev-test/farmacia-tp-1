@@ -24,7 +24,7 @@ export class NewPdaFormComponent implements OnInit {
       "Bairro",
       "Cidade",
       "Estado",
-      "Ponto de referencia",
+      "Referencia",
       "Latitude",
       "Longitude"
     ];
@@ -37,7 +37,7 @@ export class NewPdaFormComponent implements OnInit {
       bairro: ['',[Validators.required,Validators.minLength(4)]],
       cidade: ['',[Validators.required,Validators.minLength(4)]],
       estado: ['',[Validators.required,Validators.minLength(4)]],
-      pontodereferencia: ['',[]],
+      referencia: ['',[]],
       latitude: ['',[Validators.required,Validators.minLength(4)]],
       longitude: ['',[Validators.required,Validators.minLength(4)]],
 
@@ -73,8 +73,8 @@ export class NewPdaFormComponent implements OnInit {
   get estado() {
     return this.pdaForm.get("estado");
   }
-  get ponto_de_referencia() {
-    return this.pdaForm.get("ponto_de_referencia");
+  get referencia() {
+    return this.pdaForm.get("referencia");
   }
   get latitude() {
     return this.pdaForm.get("latitude");
