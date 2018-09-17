@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
     class="sidenav"
@@ -26,4 +26,28 @@
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+
+<mat-toolbar color="primary">
+  <span>
+    Farmacia - TP
+  </span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button routerLink="/home">Home</button>
+  <button *ngIf="auth.isAuthenticated()" mat-button routerLink="/pontos-de-apoio">Pontos de Apoio</button>
+  <div *ngIf="auth.isAuthenticated() && this.profile != undefined">
+    <mat-menu #appMenu="matMenu" class="menuList">
+        <mat-card>
+            <p>Name: {{this.profile.name}}</p>
+            <p>UserName: {{this.profile.nickname}}</p>
+            <button *ngIf="auth.isAuthenticated()" mat-button (click)="auth.logout()">Logout</button>
+        </mat-card>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <img class="circle" style="margin-top:8px" src="{{ this.profile.picture }}">
+    </button>
+  </div>
+  <button *ngIf="!auth.isAuthenticated()" mat-button (click)="auth.login()">Login</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
