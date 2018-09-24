@@ -12,6 +12,7 @@ import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 
 import { PontosDeApoioModule } from './pages/pontos-de-apoio/pontos-de-apoio.module';
 import { AuthService } from './auth/auth.service';
+import { PontosDeApoioService } from './pages/pontos-de-apoio/pontos-de-apoio.service';
 
 
 
@@ -40,13 +41,13 @@ import { AuthService } from './auth/auth.service';
     MatCardModule,
     MatExpansionModule,
     MatMenuModule,
-
     // modulo das paginas
     PontosDeApoioModule,
   ],
   providers: [
     AuthService,
-    Authentication
+    Authentication,
+    PontosDeApoioService
   ],
   bootstrap: [AppComponent]
 })

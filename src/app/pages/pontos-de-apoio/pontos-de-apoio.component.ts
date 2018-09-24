@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { PontosDeApoioService } from './pontos-de-apoio.service';
 
 
 @Component({
@@ -9,10 +10,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class PontosDeApoioComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private pontosDeApoioService:PontosDeApoioService) { }
 
   ngOnInit() {
-
+    console.log(`chamando funcao: `,this.pontosDeApoioService.getDataFake());
   }
 
 }

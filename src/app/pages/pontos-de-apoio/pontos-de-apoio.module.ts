@@ -6,6 +6,7 @@ import { NewPdaFormComponent } from './components/new-pda-form/new-pda-form.comp
 import { MatCardModule, MatExpansionModule, MatFormFieldModule, MatListModule, MatButtonModule, MatInputModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PontosDeApoioComponent } from './pontos-de-apoio.component';
+import { NguiMapModule} from '@ngui/map';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { PontosDeApoioComponent } from './pontos-de-apoio.component';
     MatButtonModule,
     LayoutModule,
     MatInputModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDJ55jucXC2_UcjD4t6m4xUa21NNAPq3Xo'}),
   ],
   declarations: [
     PontosDeApoioComponent,
