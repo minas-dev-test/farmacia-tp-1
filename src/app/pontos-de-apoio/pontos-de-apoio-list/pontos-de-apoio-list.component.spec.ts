@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewPdaFormComponent } from './new-pda-form.component';
+import { PontosDeApoioListComponent } from './pontos-de-apoio-list.component';
 
-describe('NewPdaFormComponent', () => {
-  let component: NewPdaFormComponent;
-  let fixture: ComponentFixture<NewPdaFormComponent>;
+describe('PontosDeApoioListComponent', () => {
+  let component: PontosDeApoioListComponent;
+  let fixture: ComponentFixture<PontosDeApoioListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewPdaFormComponent ]
+      declarations: [ PontosDeApoioListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewPdaFormComponent);
+    fixture = TestBed.createComponent(PontosDeApoioListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
