@@ -4,5 +4,24 @@
     </span>
     <span class="fill-remaining-space"></span>
     <button mat-button routerLink="">Home</button>
-    <button mat-button routerLink="/pda">Pontos de Apoio</button>
+
+    <button *ngIf="auth.isAuthenticated()" mat-button routerLink="/pontos-de-apoio">Pontos de Apoio</button>
+    
+    <div *ngIf="auth.isAuthenticated() && this.profile != undefined">
+      <mat-menu #appMenu="matMenu" class="menuList">
+          <mat-card>
+              <p>Name: {{this.profile.name}}</p>
+              <p>UserName: {{this.profile.nickname}}</p>
+              <button *ngIf="auth.isAuthenticated()" mat-button (click)="auth.logout()">Logout</button>
+          </mat-card>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <img class="circle" style="margin-top:8px" src="{{ this.profile.picture }}">
+      </button>
+    </div>
+
+    <button *ngIf="!auth.isAuthenticated()" mat-button (click)="auth.login()">Login</button>
+
   </mat-toolbar>
+
+  <router-outlet></router-outlet>

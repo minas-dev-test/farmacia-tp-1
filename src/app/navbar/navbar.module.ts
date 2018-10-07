@@ -1,3 +1,5 @@
+import { Authentication } from './../auth/auth.guard';
+import { AuthService } from './../auth/auth.service';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from './navbar.component';

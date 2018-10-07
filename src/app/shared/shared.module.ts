@@ -1,3 +1,4 @@
+import { Authentication } from './../auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -29,7 +30,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     MatCardModule,
     MatDialogModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   exports: [
     CommonModule,
@@ -52,6 +53,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     ReactiveFormsModule,
     Ng2SmartTableModule,
   ],
+  providers:[Authentication],
   declarations: []
 })
 export class SharedModule { }

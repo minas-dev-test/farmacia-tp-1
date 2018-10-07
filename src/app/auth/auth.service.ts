@@ -3,6 +3,7 @@ import { AUTH_CONFIG } from './auth0.variables';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
 
+
 (window as any).global = window;
 
 @Injectable()

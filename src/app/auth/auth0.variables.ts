@@ -5,8 +5,8 @@ interface AuthConfig {
   }
   
   export const AUTH_CONFIG: AuthConfig = {
-    clientID: '3IIhYJ8mE4UbKHCjCvsUhyuPR7NKixdZ',
-    domain: 'vsampaio.auth0.com',
+    clientID: 'FLznvBuz0s2vDXflpiM3McYSukTy43iS',
+    domain: 'projeto-farmacia.auth0.com',
     callbackURL: 'http://localhost:4200/callback'
   };
   
