@@ -12,5 +12,23 @@ export class Pda {
     private latitude: number;
     private longitude: number;
 
-    constructor() {}
+    constructor(nome:String, rua:String, bairro:String, cidade:String) {
+        this.nome = nome;
+        this.rua = rua;
+        this.bairro = bairro;
+        this.cidade = cidade;
+    }
+
+    getNome() {
+        return this.nome;
+    }
+    getRua() {
+        return this.rua;
+    }
+    getBairro() {
+        return this.bairro;
+    }
+    getCidade() {
+        return this.cidade;
+    }
 }

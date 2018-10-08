@@ -1,4 +1,7 @@
+import { Pda } from './../../core/models/pda.model';
 import { Component, OnInit } from '@angular/core';
+import { MatDialogConfig, MatDialog } from '@angular/material';
+import { PontosDeApoioFormComponent } from '../pontos-de-apoio-form/pontos-de-apoio-form.component';
 
 @Component({
   selector: 'app-pontos-de-apoio-list',
@@ -25,23 +28,24 @@ export class PontosDeApoioListComponent implements OnInit {
   };
 
   data = [
-    {
-      nome: "PDA 1",
-      rua: "Rua A",
-      bairro: "Bairro 1",
-      cidade: "Cidade B"
-    },
-    {
-      nome: "PDA 2",
-      rua: "Rua D",
-      bairro: "Bairro 2",
-      cidade: "Cidade B"
-    },
+    new Pda("pda 1", "rua a", "bairro b", "cidade c"),
   ];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    console.log('openDialog');
+
+
+    this.dialog.open(PontosDeApoioFormComponent, dialogConfig);
+}
 
 }

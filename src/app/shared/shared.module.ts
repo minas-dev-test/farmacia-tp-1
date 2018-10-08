@@ -51,9 +51,9 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     MatTabsModule,
     MatToolbarModule,
     ReactiveFormsModule,
+    MatDialogModule,
     Ng2SmartTableModule,
   ],
-  providers:[Authentication],
   declarations: []
 })
 export class SharedModule { }
