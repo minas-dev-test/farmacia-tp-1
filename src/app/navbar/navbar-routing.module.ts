@@ -4,6 +4,10 @@ import { HomepageModule } from './../homepage/homepage.module';
 import { PontosDeApoioModule } from './../pontos-de-apoio/pontos-de-apoio.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { SobreOProjetoComponent } from '../sobre-o-projeto/sobre-o-projeto.component';
+import { SacComponent } from '../sac/sac.component';
+import { MedicamentosComponent } from '../medicamentos/medicamentos.component';
+import { NoticiasComponent } from '../noticias/noticias.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -14,6 +18,10 @@ const routes: Routes = [
   },
   { path: 'home', loadChildren: () => HomepageModule },
   { path: 'pontos-de-apoio', loadChildren: () => PontosDeApoioModule, canActivate: [Authentication] },
+  { path: 'sobre-o-projeto', component: SobreOProjetoComponent },
+  { path: 'sac', component: SacComponent},
+  { path: 'medicamentos', component: MedicamentosComponent, canActivate:[Authentication] },
+  { path: 'noticias', component: NoticiasComponent }
 ];
 
 @NgModule({

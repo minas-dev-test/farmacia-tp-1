@@ -5,6 +5,14 @@
     <span class="fill-remaining-space"></span>
     <button mat-button routerLink="">Home</button>
 
+    <button mat-button routerLink="/sobre-o-projeto">Sobre o Projeto</button>
+
+    <button mat-button routerLink="/sac">SAC</button>
+
+    <button mat-button *ngIf="auth.isAuthenticated()" routerLink="/medicamentos">Medicamentos</button>
+
+    <button mat-button routerLink="/noticias">Noticias</button>
+
     <button *ngIf="auth.isAuthenticated()" mat-button routerLink="/pontos-de-apoio">Pontos de Apoio</button>
     
     <div *ngIf="auth.isAuthenticated() && this.profile != undefined">
@@ -25,3 +33,12 @@
   </mat-toolbar>
 
   <router-outlet></router-outlet>
+
+  <footer>
+    <mat-toolbar color='primary'>
+      <span class='spacer'></span>
+        <h3>© Copyright Farmacia-TP 2018.</h3>
+      <span class='spacer'></span>
+    </mat-toolbar>      
+  </footer>
+  
