@@ -1,7 +1,6 @@
 import { Pda } from './../../core/models/pda.model';
 import { Component, OnInit } from '@angular/core';
-import { MatDialogConfig, MatDialog } from '@angular/material';
-import { PontosDeApoioFormComponent } from '../pontos-de-apoio-form/pontos-de-apoio-form.component';
+import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
   selector: 'app-pontos-de-apoio-list',
@@ -10,6 +9,7 @@ import { PontosDeApoioFormComponent } from '../pontos-de-apoio-form/pontos-de-ap
 })
 export class PontosDeApoioListComponent implements OnInit {
 
+  showForm = false;
   settings = {
     columns: {
       nome: {
@@ -24,28 +24,40 @@ export class PontosDeApoioListComponent implements OnInit {
       cidade: {
         title: 'Cidade'
       },
-    }
+    },
+    actions: {
+      add: false,
+    },
+    edit: {
+      confirmSave: true,
+    },
+    mode: 'inline',
   };
 
   data = [
     new Pda("pda 1", "rua a", "bairro b", "cidade c"),
   ];
 
-  constructor(public dialog: MatDialog) { }
+  source: LocalDataSource;
+
+  constructor() { 
+    this.source = new LocalDataSource(this.data);
+  }
 
   ngOnInit() {
   }
 
-  openDialog() {
-    const dialogConfig = new MatDialogConfig();
+  togglePDAForm() {
+    this.showForm = !this.showForm;
+  }
 
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    console.log('openDialog');
-
-
-    this.dialog.open(PontosDeApoioFormComponent, dialogConfig);
-}
+  onSaveConfirm(event) {
+    if (window.confirm('Salvar?')) {
+      event.confirm.resolve(event.newData);
+      console.log("Dados editados: " + this.data);
+    } else {
+      event.confirm.reject();
+    }
+  }
 
 }

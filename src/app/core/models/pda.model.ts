@@ -11,6 +11,9 @@ export class Pda {
     private pnt_referencia: String;
     private latitude: number;
     private longitude: number;
+    private horaAbertura: String;
+    private horaFechamento: String;
+    
 
     constructor(nome:String, rua:String, bairro:String, cidade:String) {
         this.nome = nome;
@@ -31,4 +34,5 @@ export class Pda {
     getCidade() {
         return this.cidade;
     }
+
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-pontos-de-apoio-form',
@@ -12,13 +11,16 @@ export class PontosDeApoioFormComponent implements OnInit {
     PDAForm: FormGroup;
 
     constructor(
-      private fb: FormBuilder,
-      private dialogRef: MatDialogRef<PontosDeApoioFormComponent>
+      private fb: FormBuilder
       ) {
 
     }
 
     ngOnInit() {
+        this.createForm();
+    }
+
+    createForm() {
         this.PDAForm = this.fb.group({
             nome: ['', []],
             rua: ['', []],
@@ -29,25 +31,14 @@ export class PontosDeApoioFormComponent implements OnInit {
             estado: ['', []],
             pnt_referencia: ['', []],
             cep: ['', []],
+            horaAbertura: ['', []],
+            horaFechamento: ['',[]],
         });
     }
 
-    save() {
-        this.dialogRef.close(this.PDAForm.value);
-    }
-
-    close() {
-        this.dialogRef.close();
+    onSubmit() {
+        console.log(this.PDAForm.value);
     }
 }
 
-/*
-openDialog() {
-    const dialogConfig = new MatDialogConfig();
 
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    this.dialog.open(PontosDeApoioFormComponent, dialogConfig);
-}
-*/
