@@ -27,15 +27,26 @@ export class PontosDeApoioListComponent implements OnInit {
     },
     actions: {
       add: false,
+      edit: true,
+      delete: true,
     },
     edit: {
       confirmSave: true,
+      editButtonContent: 'Editar',
+      saveButtonContent: 'Salvar',
+      cancelButtonContent:'Cancelar',
+    },
+    delete: {
+      confirmDelete: true,
+      deleteButtonContent: 'Deletar',
     },
     mode: 'inline',
   };
 
   data = [
     new Pda("pda 1", "rua a", "bairro b", "cidade c"),
+    new Pda("pda 2", "rua a", "bairro d", "cidade f"),
+    new Pda("pda 3", "rua c", "bairro a", "cidade c"),
   ];
 
   source: LocalDataSource;

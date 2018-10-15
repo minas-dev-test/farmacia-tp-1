@@ -16,7 +16,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
     SobreOProjetoComponent,
     SacComponent,
     MedicamentosComponent,
-    NoticiasComponent,
+
   ],
   imports: [
     CoreModule,

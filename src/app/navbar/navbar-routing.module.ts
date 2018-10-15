@@ -1,3 +1,4 @@
+import { NoticiasModule } from './../noticias/noticias.module';
 import { Authentication } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
 import { HomepageModule } from './../homepage/homepage.module';
@@ -7,7 +8,6 @@ import { NgModule } from '@angular/core';
 import { SobreOProjetoComponent } from '../sobre-o-projeto/sobre-o-projeto.component';
 import { SacComponent } from '../sac/sac.component';
 import { MedicamentosComponent } from '../medicamentos/medicamentos.component';
-import { NoticiasComponent } from '../noticias/noticias.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'sobre-o-projeto', component: SobreOProjetoComponent },
   { path: 'sac', component: SacComponent},
   { path: 'medicamentos', component: MedicamentosComponent, canActivate:[Authentication] },
-  { path: 'noticias', component: NoticiasComponent }
+  { path: 'noticias', loadChildren: () => NoticiasModule }
 ];
 
 @NgModule({

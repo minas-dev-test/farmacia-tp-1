@@ -1,14 +1,12 @@
 <div class="list-container">
   <mat-card>
-    <mat-card-header>
+
       <mat-toolbar color="accent">
-        <span>
-          Pontos de Apoio Menu
-        </span>
+        Pontos de Apoio Menu
         <span class="fill-remaining-space"></span>
         <button mat-button routerLink="/pontos-de-apoio/listar">Listar</button>
       </mat-toolbar>
-    </mat-card-header>
+
     <mat-card-content>
         <ng2-smart-table [settings]="settings" [source]="data" (editConfirm)="onSaveConfirm($event)"></ng2-smart-table>
         

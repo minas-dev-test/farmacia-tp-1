@@ -1,0 +1,21 @@
+:host /deep/ ng2-smart-table thead > tr > th { 
+    background-color: rgb(248, 203, 134);
+ }
+
+ :host /deep/ ng2-smart-table tbody > tr { 
+    background-color: rgb(193, 255, 234);
+ }
+
+ .mat-card {
+     margin: 0;
+     padding: 0;
+ }
+
+:host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-edit-edit {
+    background-color: cornflowerblue;
+    padding-right: 30%;
+}
+
+:host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-delete-delete {
+    background-color: cornsilk;
+}
