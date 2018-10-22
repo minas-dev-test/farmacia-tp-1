@@ -1,3 +1,4 @@
+import { Authentication } from './auth/auth.guard';
 import { AuthService } from './auth/auth.service';
 import { NotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';

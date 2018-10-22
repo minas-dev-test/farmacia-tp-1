@@ -1,0 +1,40 @@
+.noticiasCard {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+    background-color: rgb(248, 192, 192);
+}
+
+.noticiasHeader {
+    flex: 1 1 auto;
+    padding: 20px;
+    background-color: rgb(121, 121, 250);
+}
+
+.noticiaContent {
+    flex: 1 1 auto;
+    width: 45%;
+    height: fit-content;
+    background-color: lawngreen;
+    float: left;
+    padding: 2.5%;
+}
+
+.noticiaTitulo {
+    flex: 1 1 auto;
+    font-size: 30px;
+    padding: 0;
+    text-align: center;
+    background-color: aqua;
+}
+
+.noticiaResumo {
+    font-size: 20px;
+    flex: 1 1 auto;
+    padding: 2.5%;
+    text-align: left;
+    background-color: brown;
+}
+

@@ -1,0 +1,10 @@
+<mat-card class="noticiasCard" flex fxLayout="column" fxLayoutAlign="center">
+  <mat-card-header class="noticiasHeader">Noticias</mat-card-header>
+  <mat-card-content class="noticiaContent" *ngFor="let noticia of noticias">
+
+    <div class="noticiaTitulo">{{noticia.titulo}}</div>
+    <div class="noticiaResumo">{{noticia.resumo}}</div>
+    <button mat-button (click)="viewNoticia(noticia)" id="noticia.id">Leia mais</button>
+    
+  </mat-card-content>
+</mat-card>

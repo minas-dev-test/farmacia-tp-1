@@ -2,7 +2,6 @@ form {
     display: flex;
     flex-direction: column;
     width: 50vw;
-    padding-bottom: 50px; /* evitar que o footer fique em cima do form */
 }
 
 button {

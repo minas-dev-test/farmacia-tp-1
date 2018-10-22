@@ -1,19 +1,22 @@
 <div class="list-container">
   <mat-card>
-
-      <mat-toolbar color="accent">
-        Pontos de Apoio Menu
+    
+    <mat-toolbar color="accent">
+        Pontos de Apoio
         <span class="fill-remaining-space"></span>
-        <button mat-button routerLink="/pontos-de-apoio/listar">Listar</button>
+        <button mat-button (click)="togglePDAForm()"> {{ showForm? 'Voltar' : 'Novo'}} </button>
+        <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Tabela</button>
+        <!-- <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Mapa</button> -->
       </mat-toolbar>
 
-    <mat-card-content>
+    <mat-card-content *ngIf="!showForm">
         <ng2-smart-table [settings]="settings" [source]="data" (editConfirm)="onSaveConfirm($event)"></ng2-smart-table>
-        
     </mat-card-content>
+
     <mat-divider></mat-divider>
+
     <mat-card-content>
-        <button mat-button (click)="togglePDAForm()">Abrir formulario</button>
+        <!-- <button mat-button (click)="togglePDAForm()">Abrir formulario</button> -->
         <div *ngIf="showForm">
             <app-pontos-de-apoio-form></app-pontos-de-apoio-form>
         </div>

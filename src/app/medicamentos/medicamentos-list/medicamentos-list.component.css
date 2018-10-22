@@ -11,15 +11,16 @@
      padding: 0;
  }
 
-:host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-edit-edit {
+ :host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-edit-edit {
     background-color: cornflowerblue;
     width: fit-content;
-
+    padding: 0;
 }
 
 :host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-delete-delete {
     background-color: cornsilk;
     width: fit-content;
+    padding: 0;
 }
 
 :host /deep/ ng2-smart-table .ng2-smart-actions {

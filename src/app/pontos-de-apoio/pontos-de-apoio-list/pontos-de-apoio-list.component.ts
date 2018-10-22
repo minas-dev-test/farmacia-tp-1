@@ -32,13 +32,13 @@ export class PontosDeApoioListComponent implements OnInit {
     },
     edit: {
       confirmSave: true,
-      editButtonContent: 'Editar',
-      saveButtonContent: 'Salvar',
-      cancelButtonContent:'Cancelar',
+      editButtonContent: '<i class="mat-button">Editar</i>',
+      saveButtonContent: '<i class="mat-button">Salvar</i>',
+      cancelButtonContent:'<i class="mat-button">Cancelar</i>',
     },
     delete: {
       confirmDelete: true,
-      deleteButtonContent: 'Deletar',
+      deleteButtonContent: '<i class="mat-button">Deletar</i>',
     },
     mode: 'inline',
   };

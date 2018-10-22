@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-content>
+      <form (submit)="onSubmit()" [formGroup]="MedicamentosForm">
+          <mat-form-field>
+              <input matInput placeholder="Nome comercial" formControlName="nomeComercial">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Laboratório" formControlName="laboratorio">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Medicamento" formControlName="principioAtivo">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Lote" formControlName="lote">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Dosagem" formControlName="dosagem">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Forma farmacêutica" formControlName="id">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Data de vencimento" formControlName="dataVencimento">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Observação" formControlName="outrasEspecificacoes">
+          </mat-form-field>
+
+          <button mat-button type="submit">Salvar</button>
+      </form>
+  </mat-card-content>
+
+</mat-card>

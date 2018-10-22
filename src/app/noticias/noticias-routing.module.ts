@@ -1,11 +1,10 @@
-import { NoticiasComponent } from './noticias.component';
-
+import { NoticiasListComponent } from './noticias-list/noticias-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 
 const routes: Routes = [
-  { path: '', component: NoticiasComponent },
+  { path: '', component: NoticiasListComponent },
 ];
 
 @NgModule({

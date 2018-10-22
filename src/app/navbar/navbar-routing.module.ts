@@ -1,3 +1,4 @@
+import { MedicamentosModule } from './../medicamentos/medicamentos.module';
 import { NoticiasModule } from './../noticias/noticias.module';
 import { Authentication } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
@@ -7,7 +8,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { SobreOProjetoComponent } from '../sobre-o-projeto/sobre-o-projeto.component';
 import { SacComponent } from '../sac/sac.component';
-import { MedicamentosComponent } from '../medicamentos/medicamentos.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'pontos-de-apoio', loadChildren: () => PontosDeApoioModule, canActivate: [Authentication] },
   { path: 'sobre-o-projeto', component: SobreOProjetoComponent },
   { path: 'sac', component: SacComponent},
-  { path: 'medicamentos', component: MedicamentosComponent, canActivate:[Authentication] },
+  { path: 'medicamentos', loadChildren: () => MedicamentosModule, canActivate:[Authentication] },
   { path: 'noticias', loadChildren: () => NoticiasModule }
 ];
 

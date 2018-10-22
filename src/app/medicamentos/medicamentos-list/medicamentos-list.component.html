@@ -1,0 +1,25 @@
+<div class="list-container">
+  <mat-card>
+
+    <mat-toolbar color="accent">
+      <span>
+        Medicamentos
+      </span>
+      <!-- <span class="fill-remaining-space"></span> -->
+      <button mat-button (click)="toggleMedicamentoForm()">{{showForm? 'Voltar':'Nova entrada'}}</button>
+      <button mat-button routerLink="/medicamentos/" *ngIf="!showForm">Tabela</button>
+    </mat-toolbar>
+
+    <mat-card-content *ngIf="!showForm">
+        <ng2-smart-table [settings]="settings" [source]="data" (editConfirm)="onSaveConfirm($event)"></ng2-smart-table>
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div *ngIf="showForm">
+            <app-medicamentos-form></app-medicamentos-form>
+        </div>
+    </mat-card-content>
+    
+  </mat-card>
+</div>
