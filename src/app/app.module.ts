@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { SobreOProjetoComponent } from './sobre-o-projeto/sobre-o-projeto.component';
 import { SacComponent } from './sac/sac.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SacComponent } from './sac/sac.component';
   imports: [
     CoreModule,
     AppRoutingModule,
-    NavbarModule
+    NavbarModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
