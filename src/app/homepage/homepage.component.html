@@ -1,1 +1,32 @@
-<h1>Farmacia Virtual</h1>
+<div class="contentWrapper">
+    <mat-grid-list cols="3" rowHeight="100px">
+            <mat-grid-tile colspan='3' rowspan='1'>
+                    <mat-card class="buscaCard">
+                        <mat-form-field class="buscaField">
+                            <input matInput placeholder="Busque medicamentos" value="">
+                        </mat-form-field>
+                    </mat-card>
+                </mat-grid-tile>
+        <mat-grid-tile colspan='1' rowspan='3'>
+            <mat-card class="textCard">
+                <mat-card-content>Quem somos?</mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile colspan='1' rowspan='3'>
+            <mat-card class="textCard">
+                <mat-card-content>O que fazemos?</mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile colspan='1' rowspan='3'>
+                <mat-card class="textCard">
+                    <mat-card-content>Nossos objetivos</mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        <mat-grid-tile colspan='3' rowspan='6'>
+            <mat-card class="carrosselCard">
+                <app-carousel-noticias></app-carousel-noticias>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

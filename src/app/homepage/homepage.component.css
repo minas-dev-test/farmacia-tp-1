@@ -1,0 +1,28 @@
+.textCard {
+    background-color: rgba(0, 0, 255, 0.397);
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+
+.buscaCard {
+    background-color: rgba(153, 205, 50, 0.445);
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+
+.carrosselCard {
+    background-color: rgb(0, 0, 0);
+    width: calc(100% - 50px);
+    height: calc(100%-50px);
+}
+
+mat-grid-list {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.buscaField {
+    width: 80%;
+    margin-left: 10%;
+}
+
