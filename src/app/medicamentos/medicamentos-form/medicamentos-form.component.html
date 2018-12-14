@@ -20,7 +20,9 @@
               <input matInput placeholder="Forma farmacêutica" formControlName="id">
           </mat-form-field>
           <mat-form-field>
-              <input matInput placeholder="Data de vencimento" formControlName="dataVencimento">
+            <input matInput [matDatepicker]="dataVencimento" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="dataVencimento"></mat-datepicker-toggle>
+            <mat-datepicker #dataVencimento></mat-datepicker>
           </mat-form-field>
           <mat-form-field>
               <input matInput placeholder="Observação" formControlName="outrasEspecificacoes">

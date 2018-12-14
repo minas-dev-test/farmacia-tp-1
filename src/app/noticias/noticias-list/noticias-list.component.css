@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     flex: 1 1 auto;
-    background-color: rgb(248, 192, 192);
+    /* background-color: rgb(248, 192, 192); */
 }
 
 .noticiasHeader {
@@ -17,7 +17,7 @@
     flex: 1 1 auto;
     width: 45%;
     height: fit-content;
-    background-color: lawngreen;
+    /* background-color:aquamarine; */
     float: left;
     padding: 2.5%;
 }
@@ -35,6 +35,10 @@
     flex: 1 1 auto;
     padding: 2.5%;
     text-align: left;
-    background-color: brown;
+    /* background-color: brown; */
+}
+
+.noticiaButton {
+    color: blue;
 }
 

@@ -1,26 +1,58 @@
 <div class="list-container">
   <mat-card>
-    
-    <mat-toolbar color="accent">
-        Pontos de Apoio
-        <span class="fill-remaining-space"></span>
-        <button mat-button (click)="togglePDAForm()"> {{ showForm? 'Voltar' : 'Novo'}} </button>
-        <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Tabela</button>
-        <!-- <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Mapa</button> -->
-      </mat-toolbar>
 
-    <mat-card-content *ngIf="!showForm">
-        <ng2-smart-table [settings]="settings" [source]="data" (editConfirm)="onSaveConfirm($event)"></ng2-smart-table>
+    <mat-toolbar color="accent">
+      Pontos de Apoio
+      <span class="fill-remaining-space"></span>
+      <button mat-button (click)="togglePDAForm()"> {{ showForm? 'Voltar' : 'Novo'}} </button>
+      <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Tabela</button>
+      <!-- <button mat-button routerLink="/pontos-de-apoio/" *ngIf="!showForm">Mapa</button> -->
+    </mat-toolbar>
+
+    <mat-card-content class="table-card" *ngIf="!showForm">
+
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Busca">
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let e"> {{e.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rua">
+          <th mat-header-cell *matHeaderCellDef> Rua </th>
+          <td mat-cell *matCellDef="let e"> {{e.rua}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bairro">
+          <th mat-header-cell *matHeaderCellDef> Bairro </th>
+          <td mat-cell *matCellDef="let e"> {{e.bairro}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cidade">
+          <th mat-header-cell *matHeaderCellDef> Cidade </th>
+          <td mat-cell *matCellDef="let e"> {{e.cidade}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[2, 5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
     </mat-card-content>
 
     <mat-divider></mat-divider>
 
     <mat-card-content>
-        <!-- <button mat-button (click)="togglePDAForm()">Abrir formulario</button> -->
-        <div *ngIf="showForm">
-            <app-pontos-de-apoio-form></app-pontos-de-apoio-form>
-        </div>
+      <!-- <button mat-button (click)="togglePDAForm()">Abrir formulario</button> -->
+      <div *ngIf="showForm">
+        <app-pontos-de-apoio-form></app-pontos-de-apoio-form>
+      </div>
     </mat-card-content>
-    
+
   </mat-card>
 </div>

@@ -1,28 +1,17 @@
-:host /deep/ ng2-smart-table thead > tr > th { 
-    background-color: rgb(248, 203, 134);
- }
-
- :host /deep/ ng2-smart-table tbody > tr { 
-    background-color: rgb(193, 255, 234);
- }
-
- .mat-card {
+.mat-card {
      margin: 0;
      padding: 0;
  }
 
- :host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-edit-edit {
-    background-color: cornflowerblue;
-    width: fit-content;
-    padding: 0;
-}
+ .table-card {
+    margin: 1%;
+ }
 
-:host /deep/ ng2-smart-table a.ng2-smart-action.ng2-smart-action-delete-delete {
-    background-color: cornsilk;
-    width: fit-content;
-    padding: 0;
-}
-
-:host /deep/ ng2-smart-table .ng2-smart-actions {
-    width: 5%;
+table {
+    width: 100%;
+  }
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
 }

@@ -1,7 +1,13 @@
 .textCard {
-    background-color: rgba(0, 0, 255, 0.397);
+    background-image: url("https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg");
+    opacity: 0.5;
     width: calc(100% - 50px);
     height: calc(100% - 50px);
+}
+
+.textCardContent {
+    color: black;
+    font-size: 50px;
 }
 
 .buscaCard {
@@ -24,5 +30,9 @@ mat-grid-list {
 .buscaField {
     width: 80%;
     margin-left: 10%;
+}
+
+.buscaButton {
+    background-color: blueviolet;
 }
 

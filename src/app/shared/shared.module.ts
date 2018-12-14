@@ -18,7 +18,11 @@ import {
   MatSlideToggleModule,
   MatTabsModule,
   MatToolbarModule,
-  MatGridListModule
+  MatGridListModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -49,7 +53,11 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     MatDialogModule,
     Ng2SmartTableModule,
     MatFormFieldModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDatepickerModule, 
+    MatNativeDateModule
   ],
   declarations: []
 })
