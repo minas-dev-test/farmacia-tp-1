@@ -17,27 +17,31 @@ export class NavbarComponent {
       map(result => result.matches)
     );
 
-    profile: any;
-    
-    constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {
-      console.log('Construtor navbar')
-      auth.handleAuthentication();
-        setTimeout(()=>{
-          this.carregarPerfil();
-        },1000);
-    }
-  
-    carregarPerfil(){
-      if(this.auth.isAuthenticated()){
+  profile: any;
+
+  constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {
+    console.log('Construtor navbar')
+    auth.handleAuthentication();
+    setTimeout(() => {
+      this.carregarPerfil();
+    }, 1000);
+  }
+
+  carregarPerfil() {
+    if (this.auth.isAuthenticated()) {
       if (this.auth.userProfile) {
         this.profile = this.auth.userProfile;
-        console.log('dados do usuario => ',this.profile)
+        console.log('dados do usuario => ', this.profile)
       } else {
         this.auth.getProfile((err, profile) => {
           this.profile = profile;
-          console.log('dados do usuario => ',this.profile)
+          console.log('dados do usuario => ', this.profile)
         });
       }
     }
-  }  
   }
+
+  toTop() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+}

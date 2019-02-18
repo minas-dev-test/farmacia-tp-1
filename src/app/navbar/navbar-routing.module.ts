@@ -6,7 +6,6 @@ import { HomepageModule } from './../homepage/homepage.module';
 import { PontosDeApoioModule } from './../pontos-de-apoio/pontos-de-apoio.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { SobreOProjetoComponent } from '../sobre-o-projeto/sobre-o-projeto.component';
 import { SacComponent } from '../sac/sac.component';
 
 const routes: Routes = [
@@ -18,7 +17,6 @@ const routes: Routes = [
   },
   { path: 'home', loadChildren: () => HomepageModule },
   { path: 'pontos-de-apoio', loadChildren: () => PontosDeApoioModule, canActivate: [Authentication] },
-  { path: 'sobre-o-projeto', component: SobreOProjetoComponent },
   { path: 'sac', component: SacComponent},
   { path: 'medicamentos', loadChildren: () => MedicamentosModule, canActivate:[Authentication] },
   { path: 'noticias', loadChildren: () => NoticiasModule }

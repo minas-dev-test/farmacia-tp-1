@@ -1,11 +1,9 @@
 <mat-toolbar class="topMenu" color="primary">
     <span>
-      <img class="logo" src="https://trello-attachments.s3.amazonaws.com/5b995e1ac9af6248701e449a/5c072af34c41b887fc5105a5/6a865bbcd9f25a9da182924e13964a61/logo.png">
+        <img class="logo" src="https://trello-attachments.s3.amazonaws.com/5b995e1ac9af6248701e449a/5c072af34c41b887fc5105a5/6a865bbcd9f25a9da182924e13964a61/logo.png">
     </span>
     <span class="fill-remaining-space"></span>
     <button mat-button routerLink="">Home</button>
-
-    <button mat-button routerLink="/sobre-o-projeto">Sobre o Projeto</button>
 
     <button mat-button routerLink="/sac">SAC</button>
 
@@ -34,11 +32,13 @@
 
   <router-outlet></router-outlet>
 
-  <!-- <footer>
+  <footer>
     <mat-toolbar color='primary'>
       <span class='spacer'></span>
         <h3>© Copyright Farmacia-TP 2018.</h3>
       <span class='spacer'></span>
+      <span class="fill-remaining-space"></span>
+      <button mat-button (click)="toTop()">Voltar ao topo</button>
     </mat-toolbar>      
-  </footer> -->
+  </footer>
   

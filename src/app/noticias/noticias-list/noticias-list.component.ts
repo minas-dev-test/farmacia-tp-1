@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { NoticiaDialogComponent } from './noticia-dialog.component';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+
+
+
 
 @Component({
   selector: 'app-noticias-list',
   templateUrl: './noticias-list.component.html',
   styleUrls: ['./noticias-list.component.css']
 })
-export class NoticiasListComponent implements OnInit {
+export class NoticiasListComponent {
 
   noticias = [
     {
@@ -34,13 +39,16 @@ export class NoticiasListComponent implements OnInit {
     },
   ]
   
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
-  ngOnInit() {
-  }
 
-  viewNoticia(data) {
-    console.log(data);
+  viewNoticia(noticia) {
+    //console.log(noticia);
+    this.dialog.open(NoticiaDialogComponent, {
+      data: {
+        noticia: noticia
+      }
+    });
   }
 
 }
